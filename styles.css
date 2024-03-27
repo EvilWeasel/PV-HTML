@@ -1,0 +1,25 @@
+form {
+  display: grid;
+  max-width: 400px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1.5fr;
+  font-size: 1.2em;
+  background-color: rgb(255, 255, 216);
+  border: 10px solid rgb(207, 207, 157);
+  padding: 10px;
+}
+form > h3 {
+  grid-column: span 2;
+}
+form > div.lieferoption {
+  grid-column: span 2;
+}
+form > input[type="submit"] {
+  margin-top: 1rem;
+  grid-column: span 2;
+}
+
+.demo label,
+.demo input {
+  display: block;
+}

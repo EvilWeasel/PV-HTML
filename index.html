@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form action="/result" method="get">
+      <h3>Auftragsanfrage:</h3>
+      <!-- start input == minimum für IHK -->
+      <label for="start">Start</label>
+      <input type="text" name="start" id="start" />
+      <label for="ziel">Ziel</label>
+      <input
+        type="text"
+        name="ziel"
+        id="ziel"
+        maxlength="20"
+        placeholder="Buxtehude-Hausen"
+      />
+      <label for="paketart">Paketart:</label>
+      <select name="paketart" id="paketart">
+        <option value="briefa4">Brief DIN A4</option>
+        <option value="briefa5">Brief DIN A5</option>
+        <option selected value="paket">Paket 2kg</option>
+      </select>
+
+      <div class="lieferoption">
+        <label for="">Lieferoption</label>
+        <input
+          type="radio"
+          name="lieferoption"
+          id="liefer-schnell"
+          value="schnell"
+          checked
+        />
+        <label for="liefer-schnell">schnell</label>
+        <input
+          type="radio"
+          name="lieferoption"
+          id="liefer-cheap"
+          value="cheap"
+        />
+        <label for="liefer-cheap">günstig</label>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- Demo: Label und Input untereinander
+      einfach: mit <br>
+      für mehrere elemente: s. css -->
+    <div class="demo">
+      <label for="blablubb">Bla</label>
+      <input type="text" id="blablubb" />
+      <label for="blablubb">Bla</label>
+      <input type="text" id="blablubb" />
+      <label for="blablubb">Bla</label>
+      <input type="text" id="blablubb" />
+    </div>
+  </body>
+  <script>
+    // Beispiel Pseudocode für Formular-Auswertung auf      Server/API
+    // function getResult(httprequest) {
+    //   var form = httprequest.form;
+    //   const newUser = new Strecke(form.start, form.ziel);
+    //   const lieferoption = form.lieferoption // (schnell, cheap)
+    // }
+  </script>
 </html>

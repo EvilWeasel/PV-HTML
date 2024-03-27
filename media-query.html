@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaQuery</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 10px;
+      }
+      #ablauf {
+        grid-column: span 2;
+      }
+      #map {
+        grid-row: span 3;
+      }
+      #map > img {
+        width: 100%;
+      }
+      @media screen and (orientation: portrait) {
+        .container {
+          /* display: flex;
+          flex-direction: column; */
+          display: block;
+        }
+        /*
+        #ablauf {
+          grid-column: 1;
+        }
+        #map {
+          grid-column: 1;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="ablauf">
+        <h3>Ablauf</h3>
+        <ol>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+            explicabo.
+          </li>
+          <li>
+            Ipsa explicabo repellendus blanditiis sapiente, veniam et quibusdam
+            id temporibus!
+          </li>
+          <li>
+            Obcaecati voluptatibus doloribus impedit. Architecto quo laudantium
+            maiores saepe dicta!
+          </li>
+          <li>
+            Laudantium unde culpa quis suscipit obcaecati dolores itaque
+            veritatis eum?
+          </li>
+        </ol>
+      </div>
+      <div id="map">
+        <img src="https://picsum.photos/1000/500" alt="map" />
+      </div>
+      <div id="auftrag">
+        <form>
+          <h3>Auftragsanfrage:</h3>
+          <label for="start">Start</label>
+          <input type="text" /> <br />
+          <label for="start">Ziel</label>
+          <input type="text" /> <br />
+          <label for="paketart">Paketart:</label>
+          <select name="paketart" id="paketart">
+            <option value="dina4">Brief DIN A4</option>
+          </select>
+        </form>
+      </div>
+      <div id="angebot">
+        <form>
+          <h3>Angebot:</h3>
+          <label for="abholung">Abholung</label>
+          <input type="text" /> <br />
+          <label for="lieferung">Lieferung</label>
+          <input type="text" /> <br />
+          <label for="preis">Preis</label>
+          <input type="text" /> <br />
+        </form>
+      </div>
+      <div id="buchung">
+        <form>
+          <h3>Buchung:</h3>
+          <label for="kundenid">Kunden ID</label>
+          <input type="text" /> <br />
+          <input type="submit" value="verbindlich buchen" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
